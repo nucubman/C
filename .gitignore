@@ -1,33 +1,28 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <stdlib.h> 
+#include <conio.h>
 
-# Precompiled Headers
-*.gch
-*.pch
+int main() {
+	int m[100];
+	int i = 0;
+	while (i < 100) {
+		int r = rand() % 100;
+		printf("%02d ", r);
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+		if (r % 2 != 0 && r % 3 != 0) {
+			m[i] = r;
+			i++;
+		}
+	}
+	printf("\n\n");
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+	for (int k = 0; k < 100; k++) {
+		printf("%02d ", m[k]);
+	}
+	printf("\n ");
+	getchar();
+}
+avigot masivi 100 elementiani da shevavsot shemtxveviti ricxvebit romlebic ar iyofa 2 ze da 3 ze
 
-# Debug files
-*.dSYM/
-*.su
